@@ -9,5 +9,5 @@ app.use(express.static("public"));
 app.use("/", homeRoutes);
 app.use("/puppet", puppeteerRoutes);
 
-const PORT = 3000;
+const PORT = process.env.PORT ||  3000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
